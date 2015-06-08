@@ -1,0 +1,7 @@
+ng-app
+ng-controller
+ng-model
+ng-click
+ng-repeat
+ng-if
+ng-show
