@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="weatherJS">
+<head>
+    <title> Ejemplo de Factory - Origamy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+
+
+<div class="wrapper" ng-controller="WeatherCtrl">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="page-header">
+                <h1>Weather AngularJS</h1>
+            </div>
+
+            <nav class="navbar navbar-default ng-scope" role="navigation">
+                <form name="form" class="navbar-form navbar-left ng-dirty ng-valid ng-valid-required" role="form" novalidate="">
+                    <!-- <label>{{title}}</label> --> <label for="lang">Language</label>
+                    <select id="lang" class="form-control " required="" >
+                        <option value="zh_cn">English  </option>
+                    </select>
+
+                    <label for="units">Units</label>
+
+                    <select id="units" class="form-control" required="">
+                        <option value="metric">Metric(°C) </option>
+                    </select>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" class="form-control" placeholder="Please input city"  auto-city="" required="" autocomplete="off" style="">
+                    <button class="btn btn-primary btn-sm" data-loading-text="Loading..." autocomplete="off"  search-btn="" disabled="disabled" value="San jose">
+                        <span class="glyphicon glyphicon-search"></span> Search </button>
+                </form>
+            </nav>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <strong>{{city.name}},{{city.country}}</strong>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item slide-animation">
+                        <span class="col-sm-1.5">today</span>
+                        <img src="http://openweathermap.org/img/w/{{onedayWeather.icon}}.png">{{onedayWeather.description}}
+                        <span class="label label-default">{{onedaytemp.min}}°F</span>
+                        <span class="label label-warning">{{onedaytemp.max}}°F</span>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <span class="col-sm-1.5">tomorrow</span>
+                        <img src="http://openweathermap.org/img/w/{{seconddayWeather.icon}}.png">{{seconddayWeather.description}}
+                        <span class="label label-default">{{seconddaytemp.min}}°F</span>
+                        <span class="label label-warning">{{seconddaytemp.max}}°F</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>
+                    <span></span>
+                    by Deybi Chavarria
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
