@@ -1,0 +1,35 @@
+<!doctype html> 
+ <html ng-app="weather"> 
+  <head> 
+    <title> Weather Search</title> 
+     <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- ANGULAR.JS Y NG-ROUTE POR SEPARADO -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script> 
+    <script src="app.js"></script> 
+   </head> 
+   <body ng-controller="WeatherCtrl"> 
+       
+       <div class="wrapper">
+           
+           <div class="container">
+               
+               <div class="page-header">
+                    
+                   <a href="/" class="navbar-link"><h1>AngularJS</h1></a>
+                </div>
+               
+               <div id="main">
+  
+                    <!-- AQUI ES DONDE ANGULAR INSERTA LOS VIEWS-->
+                    <div ng-view></div>
+
+                  </div>
+               
+           </div>
+       </div>
+        
+   </body> 
+ </html> 
